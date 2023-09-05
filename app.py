@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    r = requests.get("http://service1-container:5001")
+    r = requests.get("http://service2-service1-1:5001")
     return f"Hello from service2. Service 1 says: {r.text}"
 
 
