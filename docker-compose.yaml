@@ -16,3 +16,15 @@ services:
       - my_network
     ports:
       - "5002:5002"
+
+  prometheus: #Har hand om log
+    image: prom/prometheus:latest #utgår från dockerlab by default
+    ports:
+     - "9090:9090"
+    networks:
+      - my_network
+    volumes:
+      - ./prometheus.yml/:/etc/prometheus/prometheus.yml
+
+
+
